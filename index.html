@@ -83,13 +83,13 @@
       <section class="filters container">
         <!--=============== FILTERS TABS ===============-->
         <ul class="filters__content">
-            <button class="filters__button" data-target="#projects">Projects</button>
+            <button class="filters__button filter-tab-active" data-target="#projects">Projects</button>
             <button class="filters__button" data-target="#skills">Skills</button>
         </ul>
         
         <div class="filters__sections">
           <!--=============== PROJECTS ===============-->
-          <div class="projects__content grid" data-content id="projects">
+          <div class="projects__content grid filters__active" data-content id="projects">
             <article class="projects__card">
                 <img src="assets/img/project1.jpg" alt="project1" class="projects__img">
                 <div class="projects__modal">
@@ -253,13 +253,6 @@
                       <span class="skills__level">Intermediate</span>
                     </div>
                   </div>
-                  <div class="skills__data">
-                    <i class="ri-checkbox-circle-line"></i>
-                    <div>
-                      <h3 class="skills__name">Git</h3>
-                      <span class="skills__level">Intermediate</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -270,7 +263,11 @@
     </main>
 
     <!--=============== FOOTER ===============-->
-    <footer class="footer container"></footer>
+    <footer class="footer container">
+      <span class="footer__copy">
+        &#169; I Putu Gede Wisnawa
+      </span>
+    </footer>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src=""></script>
