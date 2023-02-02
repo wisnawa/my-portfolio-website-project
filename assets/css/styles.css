@@ -34,7 +34,7 @@
   --smaller-font-size: 0.75rem;
 }
 
-@media screen and (min-width: 968px) {
+@media (min-width: 968px) {
   :root {
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -117,6 +117,15 @@ body.dark-theme {
 }
 .dark-theme .filter-tab-active {
   background-color: black;
+}
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(var(--hue), 8%, 16%);
+}
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 8%, 24%);
+}
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 8%, 32%);
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -383,7 +392,69 @@ body.dark-theme {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media (min-width: 360px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .profile__info {
+    column-gap: 1.5rem;
+  }
+  .profile__buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .skills__box {
+    column-gap: 1rem;
+  }
+}
+@media (min-width: 375px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .profile__info {
+    column-gap: 1.5rem;
+  }
+  .profile__buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .skills__box {
+    column-gap: 1rem;
+  }
+}
 
 /* For medium devices */
+@media (min-width: 768px) {
+  .projects__content {
+    grid-template-columns: 500px;
+    justify-content: center;
+  }
+  .filters__content {
+    width: 500px;
+    margin: 3rem auto;
+  }
+}
+@media (min-width: 820px) {
+  .projects__content,
+  .skills__content {
+    grid-template-columns: repeat(2, 332px);
+  }
+  .skills__content {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
 
-/* For large devices */ ;
+/* For large devices */
+@media (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .change-theme {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
